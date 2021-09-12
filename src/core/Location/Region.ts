@@ -3,6 +3,4 @@ export enum Region {
     DekuTree = "Deku Tree",
     Jabu = "Jabu",
     KakarikoVillage = "Kakariko Village",
-
-
 }

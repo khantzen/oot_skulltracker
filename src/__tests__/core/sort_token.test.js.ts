@@ -1,7 +1,7 @@
-import {TokenList} from "../../core/TokenList";
-import {Token} from "../../core/Token";
-import {TokenType} from "../../core/TokenType";
-import {Region} from "../../core/Region";
+import {TokenList} from "../../core/Skull/TokenList";
+import {Token} from "../../core/Skull/Token";
+import {TokenType} from "../../core/Location/TokenType";
+import {Region} from "../../core/Location/Region";
 
 test("Should be able to find token by type", () => {
     const tokenList = TokenList.empty()

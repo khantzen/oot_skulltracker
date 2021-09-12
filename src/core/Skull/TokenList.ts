@@ -1,7 +1,7 @@
 import {Token} from "./Token";
-import {ItemList} from "./ItemList";
-import {TokenType} from "./TokenType";
-import {Region} from "./Region";
+import {ItemList} from "../Inventory/ItemList";
+import {TokenType} from "../Location/TokenType";
+import {Region} from "../Location/Region";
 
 export class TokenList {
     readonly tokens: Token[];

@@ -1,7 +1,7 @@
-import {Item} from "../../core/Item";
-import {ItemList} from "../../core/ItemList";
-import {Token} from "../../core/Token";
-import {TokenList} from "../../core/TokenList";
+import {Item} from "../../core/Inventory/Item";
+import {ItemList} from "../../core/Inventory/ItemList";
+import {Token} from "../../core/Skull/Token";
+import {TokenList} from "../../core/Skull/TokenList";
 
 test("Token that does not match an item list should not be yield", () => {
     const tokenList = TokenList.empty()
