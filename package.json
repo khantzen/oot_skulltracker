@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.15.0",
