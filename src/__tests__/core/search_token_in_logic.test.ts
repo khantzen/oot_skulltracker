@@ -7,7 +7,7 @@ test("Token that does not match an item list should not be yield", () => {
     const tokenList = TokenList.empty()
         .append(new Token("ut_01", [ItemList.empty().append("hookshot")]))
 
-    const matchingTokens = tokenList.findTokensFor(ItemList.empty());
+    const matchingTokens = tokenList.findTokenInLogicFor(ItemList.empty());
 
     expect(matchingTokens.count()).toBe(0)
 })
@@ -16,7 +16,7 @@ test("Token that match a given item list should be yield", () => {
     const tokenList = TokenList.empty()
         .append(new Token("ut_01", [ItemList.empty().append("hookshot")]))
 
-    const matchingTokens = tokenList.findTokensFor(
+    const matchingTokens = tokenList.findTokenInLogicFor(
         ItemList.empty().append("hookshot")
     );
 
@@ -34,7 +34,7 @@ test("Should only return the matching tokens", () => {
         .append(new Token("ut_01", [ItemList.empty().append("hookshot")]))
         .append(new Token("ut_02", [ItemList.empty().append("boomerang")]))
 
-    const matchingTokens = tokenList.findTokensFor(ItemList.empty().append("hookshot"));
+    const matchingTokens = tokenList.findTokenInLogicFor(ItemList.empty().append("hookshot"));
 
     expect(matchingTokens.count()).toBe(1)
     expect(matchingTokens.at(0).id).toBe("ut_01")
@@ -49,7 +49,7 @@ test("Should not return token when inventory does not contains all required", ()
                     .append("hover_boots")
             ]))
 
-    const matchingTokens = tokenList.findTokensFor(ItemList.empty().append("hookshot"))
+    const matchingTokens = tokenList.findTokenInLogicFor(ItemList.empty().append("hookshot"))
     expect(matchingTokens.count()).toBe(0)
 })
 
@@ -58,12 +58,15 @@ test("Should return the token when one of the unlock requirement is validated", 
         .append(
             new Token("ut_01",
                 [
-                    ItemList.empty().append("hookshot"),
-                    ItemList.empty().append("hover_boots").append("bow")
+                    ItemList.empty()
+                        .append("hookshot"),
+                    ItemList.empty()
+                        .append("hover_boots")
+                        .append("bow")
                 ]
             ))
 
-    const matchingTokens = tokenList.findTokensFor(
+    const matchingTokens = tokenList.findTokenInLogicFor(
         ItemList.empty()
             .append("bow")
             .append("hover_boots")
@@ -87,7 +90,7 @@ test("Token should not be returned when AlwaysRequire is not satisfied", () => {
             ]
         ))
 
-    const matchingTokens = tokenList.findTokensFor(ItemList.empty()
+    const matchingTokens = tokenList.findTokenInLogicFor(ItemList.empty()
         .append("hookshot")
         .append("scarecrow")
         .append("strength")
@@ -112,7 +115,7 @@ test("Token should be returned when one of the always and unlock requirement mat
         .append("iron_boots")
         .append("hookshot")
 
-    const matchingToken = tokenList.findTokensFor(inventory)
+    const matchingToken = tokenList.findTokenInLogicFor(inventory)
 
     expect(matchingToken.count()).toBe(1)
 })

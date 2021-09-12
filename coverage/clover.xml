@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1631472110786" clover="3.2.0">
+  <project timestamp="1631472110787" name="All files">
+    <metrics statements="31" coveredstatements="28" conditionals="8" coveredconditionals="5" methods="17" coveredmethods="13" elements="56" coveredelements="46" complexity="0" loc="31" ncloc="31" packages="1" files="4" classes="4"/>
+    <file name="Region.ts" path="/home/khantzen/src/vue-js/skulltracker/src/core/Region.ts">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+    </file>
+    <file name="Token.ts" path="/home/khantzen/src/vue-js/skulltracker/src/core/Token.ts">
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="19" count="10" type="stmt"/>
+      <line num="20" count="10" type="stmt"/>
+      <line num="21" count="10" type="stmt"/>
+      <line num="22" count="10" type="stmt"/>
+      <line num="23" count="10" type="stmt"/>
+    </file>
+    <file name="TokenList.ts" path="/home/khantzen/src/vue-js/skulltracker/src/core/TokenList.ts">
+      <metrics statements="16" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="10"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="10" count="16" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
+      <line num="14" count="16" type="stmt"/>
+      <line num="16" count="16" type="stmt"/>
+      <line num="17" count="16" type="stmt"/>
+      <line num="19" count="16" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="26" count="16" type="stmt"/>
+      <line num="27" count="16" type="stmt"/>
+      <line num="28" count="16" type="stmt"/>
+      <line num="30" count="16" type="stmt"/>
+      <line num="31" count="12" type="stmt"/>
+    </file>
+    <file name="TokenType.ts" path="/home/khantzen/src/vue-js/skulltracker/src/core/TokenType.ts">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="2" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
