@@ -95,3 +95,24 @@ test("Token should not be returned when AlwaysRequire is not satisfied", () => {
 
     expect(matchingTokens.count()).toBe(0)
 })
+
+test("Token should be returned when one of the always and unlock requirement match", () => {
+    const tokenList = TokenList.empty().append(
+        new Token("ut_01",
+            [
+                ItemList.empty().append("iron_boots")
+            ],
+            [
+                ItemList.empty().append("gold_scale").append("hookshot"),
+                ItemList.empty().append("iron_boots").append("hookshot"),
+            ]
+        ))
+
+    const inventory = ItemList.empty()
+        .append("iron_boots")
+        .append("hookshot")
+
+    const matchingToken = tokenList.findTokensFor(inventory)
+
+    expect(matchingToken.count()).toBe(1)
+})

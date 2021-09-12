@@ -13,7 +13,10 @@ export class ItemList {
 
     containsAll = (other: ItemList) => other.items.every(this.contains)
 
+    matchRequirement = (requirement: Array<ItemList>) =>
+        requirement.length === 0 || requirement.some((itList) => this.containsAll(itList))
+
     contains = (item: Item) => this.items.some((it) => it.name === item.name)
 
-    append = (itemName: string) => new ItemList([...this.items, Item.of(itemName) ])
+    append = (itemName: string) => new ItemList([...this.items, Item.of(itemName)])
 }

@@ -6,6 +6,4 @@ export class Item {
     }
 
     static of = (name: string) => new Item(name)
-
-
 }

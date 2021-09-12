@@ -9,17 +9,16 @@ export class TokenList {
     }
 
     static empty = () => new TokenList([])
+    append = (token: Token) => new TokenList([...this.tokens, token])
 
     count = () => this.tokens.length;
-
-    findTokensFor (itemList: ItemList): TokenList {
-        return new TokenList(this.tokens
-            .filter((token) => token.alwaysRequired.every( (itList) => itemList.containsAll(itList)) )
-            .filter((token) => token.unlockWith.some( (itList) => itemList.containsAll(itList)) )
-        )
-    }
-
     at = (index: number) => this.tokens[index]
 
-    append = (token: Token) => new TokenList([...this.tokens, token])
+    findTokensFor = (itemList: ItemList) =>
+        new TokenList(
+            this.tokens
+            .filter((token) => itemList.matchRequirement(token.alwaysRequired))
+            .filter((token) => itemList.matchRequirement(token.unlockWith))
+        )
+
 }
